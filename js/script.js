@@ -10,15 +10,27 @@ FSJS project 2 - List Filter and Pagination
 Global Variables.
 ***/
 const studentList = document.querySelectorAll('.student-item cf');
-const pageNum = 10;
+const studentsOnPage = 10;
 
 
 
 
 /*** 
-This is the show page function.
+This is the show page function. Displays 10 students and prevents the rest from displaying.
 ***/
+const showPage = (list,page) => {
+   const startIndex = (page * studentsOnPage) - studentsOnPage;
+   const endIndex = (page * studentsOnPage);
+   for (let i = 0;, i < list.length; i++) {
+      if (i.= startIndex && i < endIndex) {
+         list[i].style.display = 'block';
+      } else {
+         list[i].style.display = 'none';
 
+      }
+
+   }
+};
 
 
 
