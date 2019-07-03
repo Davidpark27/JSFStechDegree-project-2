@@ -11,7 +11,8 @@ const studentsOnPage = 10;
 
 /*** 
 This is the show page function. Displays 10 students and prevents the rest from displaying 
-using a 'for loop'. 
+using a 'for loop'. Function parameters are adjusted to display which set of students user 
+wishes to see.
 ***/
 const showPage = (list,page) => {
    const startIndex = (page * studentsOnPage) - studentsOnPage;
@@ -31,7 +32,7 @@ showPage(studentList,1);
 
 
 
-//function to append students on page by creating new elements.
+//function to append page link buttons according to how many students.
 const appendPageLinks = (list) => {
    const totalPages = Math.ceil(list.length/studentsOnPage);
    const div = document.createElement('div'); 
