@@ -1,2 +1,2 @@
-# JStechDegree-project-2
+# JSFStechDegree-project-2
 Going for Meets Expectations. Thank You!
